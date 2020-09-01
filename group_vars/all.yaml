@@ -1,4 +1,3 @@
-
 ---
 # PKI info
 state_or_province_name: "Ile-De-France"
@@ -13,7 +12,7 @@ rotate_certificats: False # This parameter is used to renew K8S PKI certificats
 # Components version
 etcd_release: v3.4.10
 kubernetes_release: v1.19.0
-delete_previous_k8s_install: True
+delete_previous_k8s_install: False
 delete_etcd_install: False
 check_etcd_install: True
 
@@ -33,8 +32,8 @@ metallb_secret_key: LGyt2l9XftOxEUIeFf2w0eCM7KjyQdkHform0gldYBKMORWkfQIsfXW0sQlo
 runtime: docker
 ingress_controller: nginx
 populate_etc_hosts: True
-k8s_dashboard: True
-enable_metrics_server: True
+k8s_dashboard: False
+enable_metrics_server: False
 enable_persistence: False
 enable_monitoring: False
 dashboard_admin_user: administrator
@@ -51,5 +50,3 @@ encrypt_etcd_keys:
 data_path: "/var/agorakube"
 etcd_data_directory: "/var/lib/etcd"
 #restoration_snapshot_file: /path/snopshot/file Located on {{ etcd_data_directory }}
-
-
